@@ -3,7 +3,7 @@ import tkinter as tk
 
 # Set the API ke
 ## import the openai key
-openai.api_key = ""
+openai.api_key =  ""
 
 import tkinter as tk
 from tkinter import filedialog
@@ -27,7 +27,7 @@ class TextEditor(tk.Tk):
         # Create a dropdown menu to select the programming language
         self.language_var = tk.StringVar(self)
         self.language_var.set("Python")  # default value
-        self.language_dropdown = tk.OptionMenu(self, self.language_var, "Google GATO Playground","System AI M3 - Mac Ripper CODEX + GATO","Silvagunner AI LSTM Zero shot GPT Silva LAMDA 2 Google Colab music","Bing API CODEX | - Programmer API Search 0.X | ","Flames OS M1 Mac Game CODEX","All in one M1 Pro Kit","[NVIDIA M1 GAME GENERATOR [ATARI-PC-MAC-PS5-ANDROID] ","ChatGPT Playground Beta","GPT4 Beta","GPT4Chan Playground","GPT3","GPT2","Davanci","Python", "HTML", "C#", "Rust", "Java", "C", "ASM","C++","Use CODEX API","Auto Detect", "English to Code", "LAMDA","Facebook META AI OTP")
+        self.language_dropdown = tk.OptionMenu(self, self.language_var, "Aditiya GPT - Butler GPT4 API","Google GATO Playground","System AI M3 - Mac Ripper CODEX + GATO","Silvagunner AI LSTM Zero shot GPT Silva LAMDA 2 Google Colab music","Bing API CODEX | - Programmer API Search 0.X | ","Flames OS M1 Mac Game CODEX","All in one M1 Pro Kit","[NVIDIA M1 GAME GENERATOR [ATARI-PC-MAC-PS5-ANDROID] ","ChatGPT Playground Beta","GPT4 Beta","GPT4Chan Playground","GPT3","GPT2","Davanci","Python", "HTML", "C#", "Rust", "Java", "C", "ASM","C++","Use CODEX API","Auto Detect", "English to Code", "LAMDA","Facebook META AI OTP")
         self.language_dropdown.pack()
 
         # Create a button to generate the code
@@ -49,7 +49,7 @@ class TextEditor(tk.Tk):
 
         # Use the ChatGPT API to generate the code
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="text-embedding-ada-002",
             prompt=f"Write a {language} program that {description}",
             temperature=0,
             max_tokens=2048,
